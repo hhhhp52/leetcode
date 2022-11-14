@@ -37,3 +37,20 @@ def add_two_number(l1: List[int] = None, l2: List[int] = None) -> List[int]:
         result = l1
 
     return result
+
+
+def longest_substring_without_repeating_characters(s: str) -> int:
+    s = "abc"
+
+    size = len(s)
+    result = 0
+    if not size:
+        start_position = 0
+        forward_alphabet = s[0]
+        for i in range(0, size - 1, 1):
+            if forward_alphabet == s[i]:
+                pass
+            else:
+                pass
+
+    return result
