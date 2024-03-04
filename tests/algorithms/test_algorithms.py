@@ -17,7 +17,7 @@ def test_add_two_number():
 
 
 def test_longest_substring_without_repeating_characters():
-    data = dataset.get_add_two_number_dataset()
+    data = dataset.get_longest_substring_without_repeating_characters()
 
     for test in data:
-        assert function.add_two_number(test.get("l1"), test.get("l2")) == test.get("result")
+        assert function.longest_substring_without_repeating_characters(test.get("s")) == test.get("result")

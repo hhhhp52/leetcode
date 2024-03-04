@@ -8,3 +8,7 @@ Func Name: two_sum()
 ### Name: Add Two Numbers
 Leetcode URL: https://leetcode.com/problems/add-two-numbers/
 Func Name: add_two_number()
+
+### Name: Longest Substring Without Repeating Characters
+Leetcode URL: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+Func Name: longest_substring_without_repeating_characters()
