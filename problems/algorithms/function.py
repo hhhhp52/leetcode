@@ -62,3 +62,57 @@ def longest_substring_without_repeating_characters(s: str) -> int:
 
     return max_length
 
+
+def string_to_integer(s: str) -> int:
+    result = 0
+    # Remove the space
+    s_without_start_and_end_space = s.strip(" ")
+    # Turn into lower case first
+    string_integer_digits = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    string_mark_digits = ["-", "+"]
+    mark_string = ""
+    start_flag = False
+    number_string = ""
+    # Start to check number string
+    for i in range(0, len(s_without_start_and_end_space), 1):
+        if not start_flag:
+            # For checking the first alphabet is effective
+            if s_without_start_and_end_space[i] not in (string_integer_digits + string_mark_digits):
+                break
+            else:
+                # Effective alphabet, need to check is number or mark
+                start_flag = True
+                if s_without_start_and_end_space[i] in string_mark_digits:
+                    if s_without_start_and_end_space[i] == "-":
+                        mark_string = "-"
+                    continue
+                if s_without_start_and_end_space[i] in string_integer_digits:
+                    number_string += s_without_start_and_end_space[i]
+        else:
+            # After checking the first alphabet, check the next character is number.
+            # If not break
+            if s_without_start_and_end_space[i] not in string_integer_digits:
+                break
+            else:
+                number_string += s_without_start_and_end_space[i]
+
+    start = 0
+    # Check NumberString
+    if number_string:
+        # If Start by 0, we should dismiss 0, ex "010" => "10"
+        for i in range(0, len(number_string), 1):
+            if number_string[i] != "0":
+                break
+            else:
+                start += 1
+
+        if start < len(number_string):
+            result = int(mark_string+number_string[start:])
+
+    # Result only accept between [-2^31, 2^31-1]
+    if result < -2**31:
+        result = -2**31
+    elif result > 2**31-1:
+        result = 2**31-1
+
+    return result

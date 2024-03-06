@@ -12,3 +12,7 @@ Func Name: add_two_number()
 ### Name: Longest Substring Without Repeating Characters
 Leetcode URL: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 Func Name: longest_substring_without_repeating_characters()
+
+### Name: String to Integer
+Leetcode URL: https://leetcode.com/problems/string-to-integer-atoi/
+Func Name: string_to_integer()

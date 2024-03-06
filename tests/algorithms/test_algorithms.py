@@ -21,3 +21,11 @@ def test_longest_substring_without_repeating_characters():
 
     for test in data:
         assert function.longest_substring_without_repeating_characters(test.get("s")) == test.get("result")
+
+
+def test_string_to_integer():
+    data = dataset.get_string_to_integer_dataset()
+
+    for test in data:
+        assert function.string_to_integer(test.get("s")) == test.get("result")
+

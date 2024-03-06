@@ -65,3 +65,55 @@ def get_longest_substring_without_repeating_characters():
     data.append(set_3)
 
     return data
+
+
+def get_string_to_integer_dataset():
+    data = list()
+    set_1 = dict(
+        s="42",
+        result=42
+    )
+    set_2 = dict(
+        s="   -42",
+        result=-42
+    )
+    set_3 = dict(
+        s="4193 with words",
+        result=4193
+    )
+
+    set_4 = dict(
+        s="words and 987",
+        result=0
+    )
+
+    set_5 = dict(
+        s="-91283472332",
+        result=-2147483648
+    )
+
+    set_6 = dict(
+        s="+-12",
+        result=0
+    )
+
+    set_7 = dict(
+        s="00000-42a1234",
+        result=0
+    )
+
+    set_8 = dict(
+        s="010",
+        result=10
+    )
+
+    data.append(set_1)
+    data.append(set_2)
+    data.append(set_3)
+    data.append(set_4)
+    data.append(set_5)
+    data.append(set_6)
+    data.append(set_7)
+    data.append(set_8)
+
+    return data
