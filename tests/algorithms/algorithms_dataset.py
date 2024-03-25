@@ -138,3 +138,20 @@ def get_roman_to_integer_dataset():
     data.append(set_3)
 
     return data
+
+
+def get_longest_common_prefix_dataset():
+    data = list()
+    set_1 = dict(
+        strs=["flower","flow","flight"],
+        result="fl"
+    )
+    set_2 = dict(
+        strs=["dog","racecar","car"],
+        result=""
+    )
+   
+    data.append(set_1)
+    data.append(set_2)
+
+    return data

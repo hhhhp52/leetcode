@@ -35,3 +35,10 @@ def test_roman_to_integer():
 
     for test in data:
         assert function.roman_to_integer(test.get("s")) == test.get("result")
+
+
+def test_longest_common_prefix():
+    data = dataset.get_longest_common_prefix_dataset()
+
+    for test in data:
+        assert function.longest_common_prefix(test.get("strs")) == test.get("result")

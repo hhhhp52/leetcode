@@ -20,3 +20,7 @@ Func Name: string_to_integer()
 ### Name: Roman to Integer
 Leetcode URL: https://leetcode.com/problems/roman-to-integer/description/
 Func Name: roman_to_integer()
+
+### Name: Longest Common Prefix
+Leetcode URL: https://leetcode.com/problems/longest-common-prefix/description/
+Func Name: longest_common_prefix()

@@ -154,3 +154,24 @@ def roman_to_integer(s: str) -> int:
                     break
 
     return result
+
+
+def longest_common_prefix(strs: List[str]) -> str:
+    result = ""
+    if len(strs) >= 1:
+        strs.sort()
+        if strs[0] != "":
+            compare_str = ""
+            flag = True
+            for i in strs[0]:
+                compare_str += i
+                for s in strs:
+                    if not s.startswith(compare_str):
+                        flag = False
+                        break
+                if flag:
+                    result = compare_str
+                    continue
+                else:
+                    break
+    return result
