@@ -116,3 +116,41 @@ def string_to_integer(s: str) -> int:
         result = 2**31-1
 
     return result
+
+
+def roman_to_integer(s: str) -> int:
+    roman_list = ["I", "V", "X", "L", "C", "D", "M"]
+
+    roman_number = dict(
+        I=1,
+        V=5,
+        X=10,
+        L=50,
+        C=100,
+        D=500,
+        M=1000
+    )
+
+    result = 0
+    start_index = 0
+    max_index = len(s) - 1
+    while True:
+        if start_index == max_index:
+            result += roman_number[s[start_index]]
+            break
+        elif start_index < max_index:
+            if roman_list.index(s[start_index]) >= roman_list.index(s[start_index + 1]):
+                result += roman_number[s[start_index]]
+                start_index = start_index + 1
+                if start_index == max_index:
+                    result += roman_number[s[start_index]]
+                    break
+            else:
+                result = result - roman_number[s[start_index]] + roman_number[s[start_index + 1]]
+                start_index = start_index + 2
+                if start_index > max_index - 1:
+                    if start_index == max_index:
+                        result += roman_number[s[start_index]]
+                    break
+
+    return result

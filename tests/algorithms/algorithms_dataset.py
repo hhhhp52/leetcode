@@ -117,3 +117,24 @@ def get_string_to_integer_dataset():
     data.append(set_8)
 
     return data
+
+
+def get_roman_to_integer_dataset():
+    data = list()
+    set_1 = dict(
+        s="III",
+        result=3
+    )
+    set_2 = dict(
+        s="LVIII",
+        result=58
+    )
+    set_3 = dict(
+        s="MCMXCIV",
+        result=1994
+    )
+    data.append(set_1)
+    data.append(set_2)
+    data.append(set_3)
+
+    return data

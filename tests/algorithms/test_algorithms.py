@@ -29,3 +29,9 @@ def test_string_to_integer():
     for test in data:
         assert function.string_to_integer(test.get("s")) == test.get("result")
 
+
+def test_roman_to_integer():
+    data = dataset.get_roman_to_integer_dataset()
+
+    for test in data:
+        assert function.roman_to_integer(test.get("s")) == test.get("result")
