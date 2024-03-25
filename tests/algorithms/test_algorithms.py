@@ -42,3 +42,11 @@ def test_longest_common_prefix():
 
     for test in data:
         assert function.longest_common_prefix(test.get("strs")) == test.get("result")
+
+
+def test_valid_parentheses():
+    data = dataset.get_valid_parentheses_dataset()
+
+    for test in data:
+        assert function.valid_parentheses(test.get("s")) == test.get("result")
+

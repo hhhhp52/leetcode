@@ -24,3 +24,7 @@ Func Name: roman_to_integer()
 ### Name: Longest Common Prefix
 Leetcode URL: https://leetcode.com/problems/longest-common-prefix/description/
 Func Name: longest_common_prefix()
+
+### Name:  Valid Parentheses
+Leetcode URL: https://leetcode.com/problems/valid-parentheses/description/
+Func Name: valid_parentheses()

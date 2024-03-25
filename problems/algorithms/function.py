@@ -168,3 +168,34 @@ def longest_common_prefix(strs: List[str]) -> str:
             result = compare_str
 
     return result
+
+
+def valid_parentheses(s: str) -> bool:
+    characters_map = {
+        "(": ")",
+        "{": "}",
+        "[": "]"
+    }
+
+    length = len(s)
+    if length % 2 == 1:
+        return False
+    else:
+        # [[0,1],[2,3],[4,5]]
+        set_type_one_flag = True
+        # [[0,-1],[1,-2],[2,-3]]
+        set_type_two_flag = True
+        for i in range(0, length // 2, 1):
+            if set_type_one_flag:
+                print("set1", s[i*2], s[i*2+1])
+                if characters_map[s[i*2]] != s[i*2+1]:
+                    set_type_one_flag = False
+            if set_type_two_flag:
+                print("set2", s[i], s[-i-1])
+                if characters_map[s[i]] != s[-i-1]:
+                    set_type_two_flag = False
+            print(set_type_one_flag, set_type_two_flag)
+            if not set_type_one_flag and not set_type_two_flag:
+                return False
+        return True
+

@@ -155,3 +155,39 @@ def get_longest_common_prefix_dataset():
     data.append(set_2)
 
     return data
+
+
+def get_valid_parentheses_dataset():
+    data = list()
+    set_1 = dict(
+        s="()",
+        result=True
+    )
+    set_2 = dict(
+        s="()[]{}",
+        result=True
+    )
+    set_3 = dict(
+        s="(]",
+        result=False
+    )
+    set_4 = dict(
+        s="([{}])",
+        result=True
+    )
+    set_5 = dict(
+        s="(([]){})",
+        result=True
+    )
+    set_6 = dict(
+        s="(([])){}",
+        result=True
+    )
+    data.append(set_1)
+    data.append(set_2)
+    data.append(set_3)
+    data.append(set_4)
+    data.append(set_5)
+    data.append(set_6)
+
+    return data
